@@ -1,0 +1,11 @@
+def print_hi(name):
+    filelist = os.listdir(name) 
+    #print(filelist)
+    for infile in filelist:
+        infile_n = infile.replace('_', '-') # 文件名中_ 替换为-
+        # outfile = os.path.splitext(infile)[0] + ".jpg"
+        # print(outfile)
+        print(infile)
+        # if infile != outfile:
+#        Image.open(infile).save()
+        os.rename(name + infile, infile_n) #  name 文件路径， infile文件名。
